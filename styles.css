@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('ubuntu-font.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+}
+
+/* Header */
+#header {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    top: 0;
+    background-color: #372C15;
+}
+h1 {
+    color: white;
+}
+
+/* Main */
+#main {
+    position: absolute;
+    top: 90px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Tables (general) */
+table, th, td {
+    text-align: center;
+    border-collapse: collapse;
+}
+table {
+    width: 95%;
+    margin: 0 auto;
+}
+th {
+    padding: 10px;
+    font-weight: bold;
+}
+td {
+    padding: 7px 2px;
+}
+
+/* Inputs */
+input {
+    text-align: center;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 5px;
+    width: 60px;
+}
+input::placeholder {
+    color: #dadada;
+}
+
+/* Buttons */
+.button-div {
+    width: 100%;
+    text-align: center;
+}
+button {
+    font-family: 'Ubuntu', sans-serif;
+}
+button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+#submit-btn {
+    top: -99999px;
+    left: -99999px;
+
+    width: 100px;
+    padding: 8px;
+    background-color: #372C15;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#reload-btn {
+    visibility: hidden;
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
+
+    width: 100px;
+    padding: 8px;
+    background-color: brown;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+#show-hide-btn {
+    visibility: hidden;
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
+
+    width: 250px;
+    padding: 8px;
+    background-color: #775a4a;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+/* Tables (individual) */
+/* Sandwiches Table */
+#sandwiches-table {
+    border-left: 1px solid #F4EEE1;
+    border-right: 1px solid #F4EEE1;
+    border-bottom: 1px solid #F4EEE1;
+    margin-bottom: 20px;
+}
+#sandwiches-table th {
+    background-color: #6B5833;
+    color: white;
+    border: 1px solid #6B5833;
+}
+#sandwiches-table td {
+    color: black;
+}
+#sandwiches-table tr:nth-child(even) {
+    background-color: #F4EEE1;
+}
+
+/* Packed Sandwiches Table */
+#packed-table {
+    border-left: 1px solid #F6F0E5;
+    border-right: 1px solid #F6F0E5;
+    border-bottom: 1px solid #F6F0E5;
+    margin-bottom: 20px;
+}
+#packed-table th {
+    background-color: #CDA960;
+    color: white;
+    border: 1px solid #CDA960;
+}
+#packed-table td {
+    color: black;
+}
+#packed-table tr:nth-child(even) {
+    background-color: #F6F0E5;
+}
+
+/* Breads Table */
+#breads-table {
+    border-left: 1px solid #FEF3DD;
+    border-right: 1px solid #FEF3DD;
+    border-bottom: 1px solid #FEF3DD;
+    margin-bottom: 20px;
+}
+#breads-table th {
+    background-color: #F2D292;
+    color: black;
+    border: 1px solid #F2D292;
+}
+#breads-table tr:nth-child(even) {
+    background-color: #FEF3DD;
+}
+#breads-table tr:nth-child(odd) {
+    background-color: white;
+}
+
+/* Ingredients Table */
+#ingredients-table {
+    border-left: 1px solid #faede7;
+    border-right: 1px solid #faede7;
+    border-bottom: 1px solid #faede7;
+    margin-bottom: 20px;
+}
+#ingredients-table th {
+    background-color: #AF7555;
+    color: white;
+    border: 1px solid #AF7555;
+}
+#ingredients-table tr:nth-child(even) {
+    background-color: #faede7;
+}
+#ingredients-table tr:nth-child(odd) {
+    background-color: white;
+}
+
+
+/* ... */
+#first-tables {
+    top: -99999px;
+    left: -99999px;
+}
+#last-tables {
+    visibility: hidden;
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
+}
+
+/* Important / Unimportant data in the last two tables */
+.important {
+    font-weight: bold;
+    color: brown;
+}
+.unimportant {
+    color: #e4cdcd;
+}
+
+/* Right columns in the first two tables */
+.right-col {
+    width: 70px;
+    font-weight: bold;
+}
+
+
+@media only screen and (min-width: 580px) {
+    #main {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    table {
+        width: 540px;
+        margin: 0 auto;
+    }
+    .right-col {
+        width: 120px;
+    }
+    input {
+        width: 100px;
+    }
+}

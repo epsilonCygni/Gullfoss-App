@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <link rel="icon" href="gray.png">
+    <title>Gullfoss App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header">
+        <h1>Gullfoss App</h1>
+    </div>
+    
+    <!-- Main -->
+    <div id="main">
+        <!-- Show / Hide Button -->
+        <div class="button-div">
+            <button id="show-hide-btn"  type="button" onclick="showHide()">Show Sandwiches</button>
+        </div>
+        
+        <!-- Arrays for sandwiches -->
+        <script>
+            let sandwiches = ['Bagels', 'Ham & Cheese Baguettes (dark)', 'Ham & Cheese Baguettes (white)', 'Tomato & Mozzarella Paninis', 'Chicken Paninis', 'Chicken Paninis (ciabatta)', 'Salami Baguettes', 'Flagets', 'Chicken Baguettes', 'Ham & Cheese Triangles', 'Roast Beef Croissants'];
+            let packedSandwiches = ['Ham & Cheese Toast', 'Roast Beef', 'Tuna', 'Vegetarian'];
+        </script>
+
+        <!-- Create the first two Tables (sandwiches) -->
+        <script>
+            // sandwiches
+            document.write("<div id='first-tables'><table id='sandwiches-table'> <tr> <th>Sandwiches (to make)</th><th class='right-col'>Rows</th> </tr>");
+            for (let i = 0; i < sandwiches.length; i++) {
+                document.write("<tr> <td>" + sandwiches[i] + "</td><td id='cellSandwiches" + i + "' class='right-col'><input type='number' id='inputSandwiches" + i + "' placeholder='?'></td> </tr>");
+            };
+            document.write("</table>");
+            // packed sandwiches
+            document.write("<table id='packed-table'> <tr> <th>Packed Sandwiches (to make)</th><th class='right-col'>Number</th> </tr>")
+            for (let i = 0; i < packedSandwiches.length; i++) {
+                document.write("<tr> <td>" + packedSandwiches[i] + "</td><td id='cellPacked" + i + "' class='right-col'><input type='number' id='inputPacked" + i + "' placeholder='?'></td> </tr>");
+            };
+            document.write("</table></div>");
+        </script>
+        
+        <!-- Submit Button -->
+        <div class="button-div">
+            <button id="submit-btn"  type="button" onclick="myFunction()">Submit</button>
+        </div>
+        
+        <div id="last-tables">
+            <!-- Breads for the oven Table -->
+            <table id="breads-table">
+                <tr>
+                    <th>Breads (oven)</th>
+                    <th>Pans</th>
+                </tr>
+                <tr> 
+                    <td>Baguettes (white)</td>
+                    <td id="baguettes-white-oven" class="important"></td>
+                </tr>
+                <tr> 
+                    <td>Baguettes (dark)</td>
+                    <td id="baguettes-dark-oven" class="important"></td>
+                </tr>
+                <tr> 
+                    <td>Bagels</td>
+                    <td id="bagels-oven" class="important"></td>
+                </tr>
+                <tr> 
+                    <td>Flagets</td>
+                    <td id="flagets-oven" class="important"></td>
+                </tr>
+                <tr> 
+                    <td>Triangles</td>
+                    <td id="triangles-oven" class="important"></td>
+                </tr>
+                <tr> 
+                    <td>Croissants</td>
+                    <td id="croissants-oven" class="important"></td>
+                </tr>
+            </table>
+
+            <!-- Ingredients to cut Table -->
+            <table id="ingredients-table">
+                <tr>
+                    <th>Ingredients (to cut)</th>
+                    <th>Pieces</th>
+                    <th>Wholes</th>
+                </tr>
+                <tr> 
+                    <td>Tomatoes</td>
+                    <td id="tomatoes-cut" class="unimportant"></td>
+                    <td id="tomatoes-cut-wholes" class="important"></td>
+                </tr>
+                <tr> 
+                    <td>Peppers</td>
+                    <td id="peppers-cut" class="unimportant"></td>
+                    <td id="peppers-cut-wholes" class="important"></td>
+                </tr>
+                <tr> 
+                    <td>Cucumbers</td>
+                    <td id="cucumbers-cut" class="important"></td>
+                    <td class="unimportant">&mdash;</td>
+                </tr>
+                <tr> 
+                    <td>Onions</td>
+                    <td class="unimportant">&mdash;</td>
+                    <td id="onions-cut-wholes" class="important"></td>
+                </tr>
+                <tr>
+                    <td>Mozzarella</td>
+                    <td id="mozzarella-cut" class="important"></td>
+                    <td class="unimportant">&mdash;</td>
+                </tr>
+                <tr>
+                    <td>Chicken (paninis)</td>
+                    <td id="chicken-paninis-cut" class="unimportant"></td>
+                    <td id="chicken-paninis-cut-wholes" class="important"></td>
+                </tr>
+                <tr>
+                    <td>Chicken (baguettes)</td>
+                    <td id="chicken-baguettes-cut" class="unimportant"></td>
+                    <td id="chicken-baguettes-cut-wholes" class="important"></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Reload Page Button-->
+        <div class="button-div">
+            <button id="reload-btn" value="Refresh Page" onClick="reloadPage()">Reload</button>
+        </div>
+    </div>
+</body>
+</html> 
